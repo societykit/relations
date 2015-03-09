@@ -58,7 +58,7 @@ skitRelations.setSchema = function( name, cl, {
     label: "Name",
     max: 200
   },
-  issues: {
+  members: {
     type: "skitRelation"
     relation: {"societies","relatedTo","people"},
     label: "Members"
@@ -90,6 +90,7 @@ So your complete autoForm could look like this:
 
 {{/autoForm}}
 </template>
+```
 
 ### Connect the schema and your collection to your autoForm
 Connect the previously created schema to your autoForm.
@@ -132,6 +133,7 @@ Template.home.helpers({
     return skitSocieties.db.find({},{sort:["name","asc"]});
   }
 });
+```
 
 
 ```
@@ -151,11 +153,10 @@ Template.home.helpers({
 
 ## Contributing
 Anyone is welcome to contribute. Just fork, make your changes and submit a pull request.
-Thanks a lot in advance!
 
 
 ## Society Kit
-This library was created as a part of the Society Kit web app that allows
+This library was created a part of the Society Kit web app that allows
 people to create new voluntary societies with own economics, rules, 
 decision-making procedures, and so on. It also informs these virtual
 societies by collecting data from various open databases and from 
